@@ -1,0 +1,130 @@
+{
+    "headless": true,
+    "verbose": false,
+    "defaultRefreshSeconds": 30,
+    "defaultMaxPrice": 800,
+    "errorTimeSeconds": 300,
+    "successTimeSeconds": 3600,
+    "disable": [ "Adorama", "EVGA", "Office Depot" ],
+    "maxTabs": 3,
+    "watches": [
+        {
+            "store": "Adorama",
+            "url": "https://www.adorama.com/l/?searchinfo=rtx%203080",
+            "expectedProductCount": 12,
+            "outOfStockText": "temporarily not available",
+            "refreshSeconds": 75,
+            "selectors": {
+                "product": "div.item:not([class*='lazy-loading'])",
+                "productURL": "a:nth-of-type(1)",
+                "productName": "div.item-details a",
+                "outOfStockSelector": "div.item-actions > form > button",
+                "price": "div.item-actions strong.your-price"
+            }
+        },
+        {
+            "store": "EVGA",
+            "url": "https://www.evga.com/products/ProductList.aspx?type=0&family=GeForce+30+Series+Family&chipset=RTX+3080",
+            "expectedProductCount": 5,
+            "selectors": {
+                "product": "div.list-item",
+                "productURL": "div.pl-list-info > div.pl-list-pname > a",
+                "productName": "div.pl-list-info > div.pl-list-pname > a",
+                "outOfStockSelector": "[id*='LFrame_prdList_rlvProdList_ctrl'][id*='_pnlNotify_'] > a",
+                "price": "[id*='LFrame_prdList_rlvProdList_ctrl'][id*='_spanFinalPrice_']"
+            }
+        },
+        {
+            "store": "Amazon",
+            "url": "https://www.amazon.com/stores/GeForce/RTX3080_GEFORCERTX30SERIES/page/6B204EA4-AAAC-4776-82B1-D7C3BD9DDC82",
+            "expectedProductCount": 14,
+            "outOfStockText": "currently unavailable",
+            "selectors": {
+                "product": "li[class='style__itemOuter__2dxew style__fixed__k9Vjk']",
+                "productURL": "a:nth-of-type(1)",
+                "productName": "div.style__truncateTitle__2JyIG",
+                "outOfStockSelector": "div.style__oos__2w3vg",
+                "price": "div[class*='style__price__']"
+            }
+        },
+        {
+            "store": "Newegg",
+            "url": "https://www.newegg.com/p/pl?N=100007709%20601357247",
+            "expectedProductCount": 15,
+            "outOfStockText": "auto notify",
+            "selectors": {
+                "product": "#app > div.page-content > section > div > div > div.row-body > div > div > div > div.row-body > div > div.list-wrap > div.item-cells-wrap.border-cells.items-grid-view.four-cells.expulsion-one-cell > div",
+                "productURL": "a:nth-of-type(1)",
+                "productName": "a:nth-of-type(1) > img",
+                "productAttribute": "title",
+                "outOfStockSelector": "div.item-button-area",
+                "price": "li.price-current"
+            }
+        },
+        {
+            "store": "Office Depot",
+            "url": "https://www.officedepot.com/catalog/search.do;jsessionid=00006Kn2yb9ArFW0AhUPCR96nBS:17h4h7dlm?Ntt=RTX%203080&cmsearch=%7Crecent%20searches%7CRTX%203080&predict=true",
+            "expectedProductCount": 2,
+            "outOfStockText": "out of stock",
+            "selectors": {
+                "product": "div.gw3.omega.sku_item",
+                "productURL": "a:nth-of-type(1)",
+                "productName": "a:nth-of-type(1) > img",
+                "productAttribute": "title",
+                "outOfStockSelector": "div.oos_label",
+                "price": "span.price_column.right"
+            }
+        },
+        {
+            "store": "B&H",
+            "url": "https://www.bhphotovideo.com/c/buy/rtx-3080/ci/48452",
+            "expectedProductCount": 5,
+            "outOfStockText": "notify when available",
+            "selectors": {
+                "product": "div[data-selenium='miniProductPage']",
+                "productURL": "a:nth-of-type(1)",
+                "productName": "div[data-selenium='miniProductPageProductSkuInfo']",
+                "outOfStockSelector": "button[data-selenium='notifyAvailabilityButton']",
+                "price": "span[data-selenium='uppedDecimalPriceFirst']"
+            }
+        },
+        {
+            "store": "NVIDIA",
+            "url": "https://www.nvidia.com/en-us/shop/geforce/?page=1&limit=9&locale=en-us&gpu=RTX%203080&gpu_filter=RTX%203090~12,RTX%203080~16,RTX%203070~1,RTX%202080%20SUPER~17,RTX%202080~5,RTX%202070%20SUPER~28,RTX%202070~17,RTX%202060%20SUPER~4,RTX%202060~37,GTX%201660%20Ti~25,GTX%201660%20SUPER~3,GTX%201660~11,GTX%201650%20Ti~6,GTX%201650%20SUPER~5,GTX%201650~36",
+            "expectedProductCount": 1,
+            "outOfStockText": "out Of stock",
+            "selectors": {
+                "product": "#resultsDiv > div > div:nth-child(1)",
+                "productName": "h2.name",
+                "outOfStockSelector": "div.buy-col-lg > div:nth-child(1) > div.buy > a",
+                "price": "div.buy-col-lg > div:nth-child(1) > div.price.clearfix > span:nth-child(1)"
+            }
+        },
+        {
+            "store": "Zotac",
+            "url": "https://store.zotac.com/graphics-cards?cat=495",
+            "expectedProductCount": 2,
+            "outOfStockText": "notify me",
+            "selectors": {
+                "product": "li.item.col-xs-12.col-sm-4",
+                "productURL": "a:nth-of-type(1)",
+                "productName": "a:nth-of-type(1)",
+                "outOfStockSelector": "div > div.product-details > div.wrapper-hover-hiden > div > p > span > a",
+                "price": "span.price"
+            }
+        },
+        {
+            "store": "Best Buy",
+            "url": "https://www.bestbuy.com/site/computer-cards-components/video-graphics-cards/abcat0507002.c?id=abcat0507002&qp=gpusv_facet%3DGraphics%20Processing%20Unit%20(GPU)~NVIDIA%20GeForce%20RTX%203080",
+            "expectedProductCount": 9,
+            "outOfStockText": "sold out|shop open-box",
+            "selectors": {
+                "product": "div[id*='shop-sku-list-item-']",
+                "productURL": "a:nth-of-type(1)",
+                "productName": "div.sku-title > h4 > a",
+                "outOfStockSelector": "div.fulfillment-add-to-cart-button",
+                "price": "div.priceView-hero-price.priceView-customer-price > span:nth-child(1)"
+            }
+        }
+    ]
+}

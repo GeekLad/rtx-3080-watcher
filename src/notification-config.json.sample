@@ -1,0 +1,5 @@
+{
+  "gmail": "yourgmailaccount@gmail.com",
+  "password": "yourgmailaccountpassword",
+  "recipients": [ "example@email.com", "anotheremail@email.com" ]
+}
