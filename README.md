@@ -36,8 +36,6 @@ Each watch configuration has the following parameters:
 * 0.1.0
     * Initial release
 
-## Meta
-
 ## Contributing
 
 1. Fork it
